@@ -1,6 +1,6 @@
 <?php
 
-// Metro em CM
+// Metros em CM
 
 $metros = $argv[1] ?? 1;
 
