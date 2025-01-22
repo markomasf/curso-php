@@ -2,6 +2,9 @@
 echo "Bem-vindo(a) ao Screen Match!\n";
 
 $nomeFilme = "Top Gun - Maverick";
+$nomeFilme = "Se beber não case";
+$nomeFilme = "Thor: Ragnarok";
+
 $anoLancamento = $argv[1] ?? 2022;
 $somaNotas = 9;
 $somaNotas += 6;
@@ -25,3 +28,13 @@ if ($anoLancamento >= 2024) {
 } else {
     echo "Esse filme não é mais lançamento.\n";
 }
+
+// Match para casar informações
+
+$genero = match ($nomeFilme) {
+    "Top Gun - Maverick" => "Ação",
+    "Thor: Ragnarok" => "Super-herói",
+    "Se beber não case" => "Comédia"
+};
+
+echo "Genero do filme é: " . $genero . "\n";
