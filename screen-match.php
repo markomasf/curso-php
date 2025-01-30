@@ -10,6 +10,10 @@ function exibeMensagemLancamento($ano){
     }
 }
 
+function incluidoNoPlano($planoPrime, $anoLancamento ){
+    return $planoPrime || $anoLancamento < 2020;
+}
+
 echo "Bem-vindo(a) ao Screen Match!\n";
 
 $nomeFilme = "Top Gun - Maverick";
@@ -26,7 +30,7 @@ $somaNotas += 5;
 $notaFilme = $somaNotas/5;
 $planoPrime = true;
 
-$incluidoNoPlano = $planoPrime || $anoLancamento > 2020;
+$incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
 echo "Nome do filme: " . $nomeFilme . "\n";
 echo "Média da Nota: " . $notaFilme. "\n";
@@ -51,6 +55,6 @@ $filme = [
     "genero" => "super-herói"
 ];
 
-exibeMensagemLancamento($filme['ano']);
+exibeMensagemLancamento($anoLancamento);
 
 echo $filme["ano"];
