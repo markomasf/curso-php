@@ -1,4 +1,15 @@
 <?php
+
+function exibeMensagemLancamento($ano){
+    if ($ano >= 2024) {
+        echo "Esse filme é um lançamento\n";
+    } elseif ($ano > 2022 && $ano < 2024) {
+        echo "Esse Filme ainda é novo\n";
+    } else {
+        echo "Esse filme não é mais lançamento.\n";
+    }
+}
+
 echo "Bem-vindo(a) ao Screen Match!\n";
 
 $nomeFilme = "Top Gun - Maverick";
@@ -21,13 +32,7 @@ echo "Nome do filme: " . $nomeFilme . "\n";
 echo "Média da Nota: " . $notaFilme. "\n";
 echo "Ano de Lançamento: " . $anoLancamento . "\n";
 
-if ($anoLancamento >= 2024) {
-    echo "Esse filme é um lançamento\n";
-} elseif ($anoLancamento > 2022 && $anoLancamento < 2024) {
-    echo "Esse Filme ainda é novo\n";
-} else {
-    echo "Esse filme não é mais lançamento.\n";
-}
+
 
 // Match para casar informações
 
@@ -46,4 +51,6 @@ $filme = [
     "genero" => "super-herói"
 ];
 
-echo $filme['nome'];
+exibeMensagemLancamento($filme['ano']);
+
+echo $filme["ano"];
