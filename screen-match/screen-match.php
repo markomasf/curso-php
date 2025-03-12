@@ -45,4 +45,6 @@ $filme = [
 
 echo $filme["ano"];
 
-echo json_encode($filme);
+$filmeParaSalvar = json_encode($filme);
+
+file_put_contents(__DIR__ . '/filme.json', $filmeParaSalvar);
