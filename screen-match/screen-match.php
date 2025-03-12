@@ -44,3 +44,5 @@ $filme = [
 
 
 echo $filme["ano"];
+
+echo json_encode($filme);
